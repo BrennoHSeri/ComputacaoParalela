@@ -84,8 +84,8 @@ $$
 
 Com a aplicação desse algoritmo, obtém-se a imagem com os contornos destacados, como é possível observar na figura abaixo:
 
-![Imagem antes e depois da aplicação do filtro de Sobel](Images/macaco.png)
-![Imagem depois da aplicação do filtro de Sobel](Images/macaco_borda.png)
+![Imagem antes e depois da aplicação do filtro de Sobel](macaco.png)
+![Imagem depois da aplicação do filtro de Sobel](macaco_borda.png)
 
 *Figura 1: Imagem antes e depois da aplicação do filtro de Sobel*
 
