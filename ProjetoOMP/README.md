@@ -10,37 +10,37 @@ O filtro de Sobel usa duas máscaras (kernels) separadas, uma para detectar muda
 
 $$
 g_x =
-\\begin{bmatrix}
-1 & 2 & 1 \\\\
-0 & 0 & 0 \\\\
+\begin{bmatrix}
+1 & 2 & 1 \\
+0 & 0 & 0 \\
 -1 & -2 & -1
-\\end{bmatrix}
+\end{bmatrix}
 $$
 
 $$
 g_y =
-\\begin{bmatrix}
--1 & 0 & 1 \\\\
--2 & 0 & 2 \\\\
+\begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
 -1 & 0 & 1
-\\end{bmatrix}
+\end{bmatrix}
 $$
 
 O processo de convolução envolve a aplicação dessas máscaras à imagem original. Para cada pixel na imagem, a convolução é realizada multiplicando os valores da máscara pelos valores dos pixels correspondentes na vizinhança do pixel em questão e somando esses produtos. Isso é feito separadamente para as máscaras $g_x$ e $g_y$.
 
 $$
 G_x = 
-\\begin{bmatrix}
--1 & 0 & 1 \\\\
--2 & 0 & 2 \\\\
+\begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
 -1 & 0 & 1
-\\end{bmatrix}
-\\ast
-\\begin{bmatrix}
-a_{11} & a_{12} & a_{13} \\\\
-a_{21} & a_{22} & a_{23} \\\\
+\end{bmatrix}
+\ast
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33}
-\\end{bmatrix}
+\end{bmatrix}
 $$
 
 $$
@@ -51,17 +51,17 @@ $$
 
 $$
 G_y =
-\\begin{bmatrix}
-1 & 2 & 1 \\\\
-0 & 0 & 0 \\\\
+\begin{bmatrix}
+1 & 2 & 1 \\
+0 & 0 & 0 \\
 -1 & -2 & -1
-\\end{bmatrix}
-\\ast
-\\begin{bmatrix}
-a_{11} & a_{12} & a_{13} \\\\
-a_{21} & a_{22} & a_{23} \\\\
+\end{bmatrix}
+\ast
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33}
-\\end{bmatrix}
+\end{bmatrix}
 $$
 
 $$
@@ -73,22 +73,23 @@ $$
 A magnitude do gradiente resultante é calculada combinando as componentes horizontal e vertical usando a seguinte fórmula:
 
 $$
-G = \\sqrt{G_x^2 + G_y^2}
+G = \sqrt{G_x^2 + G_y^2}
 $$
 
 Para obter o valor do pixel do detector de borda, é utilizado o valor normalizado pela máxima magnitude do gradiente com a seguinte fórmula:
 
 $$
-P_{ij} = \\dfrac{G_{ij} \\cdot 255}{G_{max}}
+P_{ij} = \dfrac{G_{ij} \cdot 255}{G_{max}}
 $$
 
 Com a aplicação desse algoritmo, obtém-se a imagem com os contornos destacados, como é possível observar na figura abaixo:
 
-![Imagem antes e depois da aplicação do filtro de Sobel](macaco.png)
-![Imagem depois da aplicação do filtro de Sobel](macaco_borda.png)
+<p align="center">
+  <img src="macaco.png" alt="Imagem original" width="300">
+  <img src="macaco_borda.png" alt="Imagem com Sobel" width="300">
+</p>
 
 *Figura 1: Imagem antes e depois da aplicação do filtro de Sobel*
-
 
 ## Referências
 
