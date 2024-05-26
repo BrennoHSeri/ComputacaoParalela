@@ -14,3 +14,11 @@ O programa desenvolvido realiza as seguintes operações em uma matriz:
 - Soma de todos os elementos
 - Soma dos elementos de cada linha
 - Soma dos elementos de cada coluna
+
+## 3. Desempenho
+
+<img src="Images/TAM1000.jpg" alt="TAM1000" width="400"/>
+<img src="Images/TAM2500.jpg" alt="TAM2500" width="400"/>
+<img src="Images/TAM5000.jpg" alt="TAM5000" width="400"/>
+<img src="Images/TAM10000.jpg" alt="TAM10000" width="400"/>
+<img src="Images/TAM15000.jpg" alt="TAM15000" width="400"/>
